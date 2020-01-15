@@ -5,5 +5,6 @@ if [ -d /work ]; then
 fi
 
 export PATH=/opt/conda/bin:$PATH
+export PYTHONHOME=/usr/local
 jupyter notebook --ip='*' --port=8888 --no-browser
 
