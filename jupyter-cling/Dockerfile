@@ -48,6 +48,7 @@ RUN apt-get update                  && \
 RUN conda install cling -c QuantStack -c conda-forge -y      && \
     conda install xeus-cling -c QuantStack -c conda-forge -y && \
     conda install notebook -c conda-forge -y                 && \
+    conda install matplotlib -c conda-forge -y                 && \
     conda clean --all --yes
 
 # set up user and environment
