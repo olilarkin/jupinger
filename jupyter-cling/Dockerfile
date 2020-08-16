@@ -46,9 +46,10 @@ RUN apt-get update                  && \
     rm -rf /var/lib/apt/lists/* /var/log/dpkg.log
 
 RUN conda install cling -c QuantStack -c conda-forge -y      && \
-    conda install xeus-cling -c QuantStack -c conda-forge -y && \
+    conda install xeus-cling xwidgets -c QuantStack -c conda-forge -y && \
     conda install notebook -c conda-forge -y                 && \
     conda install matplotlib -c conda-forge -y                 && \
+    conda install widgetsnbextension -c conda-forge && \
     conda clean --all --yes
 
 # set up user and environment
